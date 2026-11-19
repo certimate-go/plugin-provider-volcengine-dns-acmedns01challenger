@@ -1,0 +1,4 @@
+{
+  "plugin.volcengine-dns.name": "Volcano Engine - DNS",
+  "plugin.volcengine-dns.description": "DNS-01 via Volcano Engine DNS."
+}

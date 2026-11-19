@@ -1,0 +1,4 @@
+{
+  "plugin.volcengine-dns.name": "火山引擎 - 云解析 DNS",
+  "plugin.volcengine-dns.description": "通过火山引擎云解析 DNS 完成 DNS-01 验证。"
+}

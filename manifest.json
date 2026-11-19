@@ -1,0 +1,13 @@
+{
+  "access_provider_type": "volcengine",
+  "binary": "volcengine-dns.exe",
+  "capability": "dns",
+  "description": "DNS-01 via Volcano Engine DNS.",
+  "display_name_key": "plugin.volcengine-dns.name",
+  "icon": "volcengine.png",
+  "min_core_version": "",
+  "protocol_version": 4,
+  "provider_type": "volcengine-dns",
+  "usages": ["dns"],
+  "version": "0.1.0"
+}

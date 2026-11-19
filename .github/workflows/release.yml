@@ -1,0 +1,19 @@
+name: Release provider
+run-name: Release ${{ inputs.trigger_tag }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      trigger_tag:
+        description: Release request tag, vX.Y.Z-detach
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    uses: certimate-go/plugins/.github/workflows/provider-release.yml@main
+    with:
+      trigger_tag: ${{ inputs.trigger_tag }}
