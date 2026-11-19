@@ -1,0 +1,66 @@
+{
+  "provider_type": "volcengine-dns",
+  "repository": "certimate-go/plugin-provider-volcengine-dns-acmedns01challenger",
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "source_commit": "c75c02f5a9aa41ad27b4659754c286bf7d00099d",
+  "build_run_id": "44457727136",
+  "artifacts": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "path": "build/darwin_amd64.zip",
+      "size": 6233757,
+      "sha256": "112d073a0c27a43fc9a3b901d29941413103e841703503738c42eaa2f8d6d734"
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "path": "build/darwin_arm64.zip",
+      "size": 5866725,
+      "sha256": "b6ccce843d18c4d81717418b8f8fe783e1aa75ac8aad7dc784ffa16fcb69a8c9"
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "path": "build/linux_amd64.zip",
+      "size": 6227637,
+      "sha256": "5ef69b1f3b5e5ff311e49192f691bf5afc67a564583892549b6efa03ae566836"
+    },
+    {
+      "os": "linux",
+      "arch": "arm",
+      "path": "build/linux_arm.zip",
+      "size": 5870634,
+      "sha256": "cc410e86703b32426a41ecb2190e2d09d93b67ffebf010716a6fb4866e263355"
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "path": "build/linux_arm64.zip",
+      "size": 5622920,
+      "sha256": "9064b8543dceec29d42a4ea58e809dfe7a9cc5d59b4a7416699e22208de02778"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "build/windows_386.zip",
+      "size": 5995049,
+      "sha256": "fe66ebf284aabe14ffe59ebed40a7f995684d4c296b77c14ee5ce2cb3774c58c"
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "build/windows_amd64.zip",
+      "size": 6356752,
+      "sha256": "c1af75d123a8410e8455984a9dd9456903347251c0662fd8806082943cbc6df7"
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "path": "build/windows_arm64.zip",
+      "size": 5711855,
+      "sha256": "f0f823bc7db72dc8efcf2af8fb10310fee07ff7655e6abb03147df6eda5aa11c"
+    }
+  ]
+}
