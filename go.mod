@@ -1,4 +1,4 @@
-module github.com/certimate-go/plugin-provider-volcengine-dns
+module github.com/certimate-go/plugin-provider-volcengine-dns-acmedns01challenger
 
 go 1.27.4
 
