@@ -8,6 +8,7 @@
   "min_core_version": "",
   "protocol_version": 4,
   "provider_type": "volcengine-dns",
+  "provider_aliases": ["volcengine"],
   "usages": ["dns"],
   "version": "0.1.0"
 }

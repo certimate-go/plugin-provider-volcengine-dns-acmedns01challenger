@@ -3,7 +3,7 @@ module github.com/certimate-go/plugin-provider-volcengine-dns-acmedns01challenge
 go 1.27.4
 
 require (
-	github.com/certimate-go/certimate v0.4.39-0.20261117024256-d35882e429db
+	github.com/certimate-go/certimate v0.4.39-0.20261119031423-3ca654aab25d
 	github.com/go-acme/lego/v5 v5.6.0
 	github.com/hashicorp/go-plugin v1.8.0
 	github.com/miekg/dns v1.1.73

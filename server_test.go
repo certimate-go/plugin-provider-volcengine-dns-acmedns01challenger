@@ -100,6 +100,8 @@ func TestDNSChallengeSubprocess(t *testing.T) {
 	t.Setenv("VOLC_HOST", strings.TrimPrefix(api.URL, "http://"))
 	t.Setenv("VOLC_SCHEME", "http")
 	t.Setenv("VOLC_TTL", "600")
+	t.Setenv("VOLC_PROPAGATION_TIMEOUT", "310")
+	t.Setenv("VOLC_POLLING_INTERVAL", "6")
 	t.Setenv("VOLC_ACCESSKEY", "ambient-key")
 	t.Setenv("VOLC_SECRETKEY", "ambient-secret")
 
@@ -125,7 +127,7 @@ func TestDNSChallengeSubprocess(t *testing.T) {
 	if len(installed) != 1 || len(failures) != 0 {
 		t.Fatalf("discover plugin: got %d plugins, failures %v", len(installed), failures)
 	}
-	session, err := manager.StartSession(t.Context(), installed[0])
+	session, err := manager.StartSession(t.Context(), installed[0], nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -133,6 +135,13 @@ func TestDNSChallengeSubprocess(t *testing.T) {
 	meta, err := session.GetMetadata(t.Context())
 	if err != nil || meta.ProviderType != providerType || meta.AccessProviderType != "volcengine" || meta.Capability != plugin.CapabilityDns {
 		t.Fatalf("plugin metadata: %+v, %v", meta, err)
+	}
+	var timing struct {
+		TimeoutSeconds  int `json:"propagation_timeout_seconds"`
+		IntervalSeconds int `json:"propagation_polling_interval_seconds"`
+	}
+	if err := json.Unmarshal(meta.RuntimeConfigJSON, &timing); err != nil || timing.TimeoutSeconds != 310 || timing.IntervalSeconds != 6 {
+		t.Fatalf("unexpected propagation timing: %+v, %v", timing, err)
 	}
 	schema, err := session.GetConfigSchema(t.Context())
 	if err != nil || len(schema.AccessSchemaJSON) != 0 || len(schema.ProviderSchemaJSON) == 0 {
